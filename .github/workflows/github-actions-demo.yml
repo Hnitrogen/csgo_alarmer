@@ -37,6 +37,13 @@ jobs:
           username: ${{ secrets.EMAIL_USERNAME }}  # 电子邮件账户用户名
           password: ${{ secrets.EMAIL_PASSWORD }}  # 电子邮件账户密码
           subject: "Csgo饰品冷却日报"
-          body: ${{ steps.run-python.outputs.python-output }}
+          body: 
+            |
+              <html>
+              <body>
+                <p>脚本输出内容：</p>
+                <pre>{{ fileToString('output.txt') }}</pre>
+              </body>
+              </html>
           from: luojicat@protonmail.com  # 发件人电子邮件地址
           to: 1791422575@qq.com  # 收件人电子邮件地址
