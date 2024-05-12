@@ -33,7 +33,7 @@ jobs:
           server_port: 587  # 电子邮件服务器端口
           username: ${{ secrets.EMAIL_USERNAME }}  # 电子邮件账户用户名
           password: ${{ secrets.EMAIL_PASSWORD }}  # 电子邮件账户密码
-          subject: "Python Script Result"
+          subject: "Csgo饰品冷却日报"
           body: ${{ steps.run_script.outputs.stdout }}
           from: luojicat@protonmail.com  # 发件人电子邮件地址
           to: 1791422575@qq.com  # 收件人电子邮件地址
