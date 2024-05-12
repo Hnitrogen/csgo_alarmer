@@ -9,5 +9,6 @@
 - appid: 730 csgo2的
 - 接口文档: https://partner.steamgames.com/doc/webapi/IInventoryService#GetInventory
 
- TODO
-[]我记得steamworks的api有通过个人steam——token获取饰品的接口，出差回来找不到了，有空找找把上面的缺陷修复了   --- https://partner.steamgames.com/doc/webapi/IInventoryService#GetInventory
+
+[] 我记得steamworks的api有通过个人steam——token获取饰品的接口，出差回来找不到了，有空找找把上面的缺陷修复了   --- https://partner.steamgames.com/doc/webapi/IInventoryService#GetInventory
+[] 请求头Host/Refer 如果携带 github.com 会被Nginx拦截
