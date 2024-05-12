@@ -29,7 +29,7 @@ jobs:
       - name: Send Email
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp-mail.outlook.com # 电子邮件服务器地址
+          server_address: smtp.qq.com # 电子邮件服务器地址
           server_port: 587  # 电子邮件服务器端口
           username: ${{ secrets.EMAIL_USERNAME }}  # 电子邮件账户用户名
           password: ${{ secrets.EMAIL_PASSWORD }}  # 电子邮件账户密码
