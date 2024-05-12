@@ -22,16 +22,16 @@ jobs:
 
       - name: Run Python Script
         id: run_script
-        run: python your_script.py
+        run: python cs_async.py
 
       - name: Send Email
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.example.com  # 电子邮件服务器地址
+          server_address: smtp.protonmail.com # 电子邮件服务器地址
           server_port: 587  # 电子邮件服务器端口
           username: ${{ secrets.EMAIL_USERNAME }}  # 电子邮件账户用户名
           password: ${{ secrets.EMAIL_PASSWORD }}  # 电子邮件账户密码
           subject: "Python Script Result"
           body: ${{ steps.run_script.outputs.stdout }}
-          from: your_email@example.com  # 发件人电子邮件地址
+          from: luojicat@protonmail.com  # 发件人电子邮件地址
           to: 1791422575@qq.com  # 收件人电子邮件地址
