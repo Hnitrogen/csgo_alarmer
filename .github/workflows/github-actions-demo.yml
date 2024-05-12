@@ -2,6 +2,8 @@ name: Cs2_alarmer
 on:
   schedule:
     - cron: '0 22 * * *'  # UTC+8，对应中国每天早上六点
+  workflow_dispatch:
+
 jobs:
   build:
     name: Run Python Script
