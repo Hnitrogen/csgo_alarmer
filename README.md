@@ -5,6 +5,8 @@
 
 友情链接: 
 - 获取steam-api-key:  https://steamcommunity.com/dev/apikey
+- steamid: https://store.steampowered.com/account/
+- appid: 730 csgo2的
 - 接口文档: https://partner.steamgames.com/doc/webapi/IInventoryService#GetInventory
 
  TODO
