@@ -2,7 +2,7 @@ name: Cs2_alarmer
 on:
   schedule:
     - cron: '0 22 * * *'  # UTC+8，对应中国每天早上六点
-  workflow_dispatch:
+  workflow_dispatch:      # 开启手动触发，可以在github上提交任务
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
 
       - name: Run Python Script
         id: run_script
-        run: python cs_async.py
+        run: python cs_sync.py
 
       - name: Send Email
         uses: dawidd6/action-send-mail@v3
