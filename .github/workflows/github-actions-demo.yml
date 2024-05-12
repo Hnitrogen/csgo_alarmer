@@ -37,6 +37,6 @@ jobs:
           username: ${{ secrets.EMAIL_USERNAME }}  # 电子邮件账户用户名
           password: ${{ secrets.EMAIL_PASSWORD }}  # 电子邮件账户密码
           subject: "Csgo饰品冷却日报"
-          body: output.txt
+          body: file://output.txt
           from: luojicat@protonmail.com  # 发件人电子邮件地址
           to: 1791422575@qq.com  # 收件人电子邮件地址
