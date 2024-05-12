@@ -35,7 +35,6 @@ def get_items(count: int, game_id: int):
     base_url = (f"https://steamcommunity.com/inventory/76561198364650650/"
                 f"{str(game_id)}/2?l=schinese&count={str(count)}")
     # base_url = "https://steamcommunity.com/inventory/76561198364650650/730/2?l=schinese&count=75"
-    print(base_url)
     res = requests.get(base_url,
                        headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
                                               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
