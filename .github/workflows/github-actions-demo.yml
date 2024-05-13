@@ -24,10 +24,7 @@ jobs:
 
       - name: Run Python Script
         id: run_script
-        run: |
-          python cs_sync.py > output.txt 
-          echo "::set-output name=python-output::$(cat output.txt)"
-
+        run: python cs_sync.py > output.txt 
 
       - name: Send Email
         uses: dawidd6/action-send-mail@v3
