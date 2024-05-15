@@ -3,13 +3,13 @@ import json
 import os
 
 #
-cookies = json.loads(os.getenv("Cookie"))
-print(cookies) 
+cookies = os.getenv("Cookie")
 
 headers = {
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language': 'zh-CN,zh;q=0.9',
     'cache-control': 'max-age=0',
+    'Cookie': cookies,
     'priority': 'u=0, i',
     'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
     'sec-ch-ua-mobile': '?0',
@@ -34,8 +34,7 @@ params = {
 }
 
 # 我没有steam开放商密钥，但是Buff有啊hhh
-response = requests.get('https://buff.163.com/api/market/steam_inventory', params=params, cookies=cookies,
-                        headers=headers)
+response = requests.get('https://buff.163.com/api/market/steam_inventory', params=params,headers=headers)
 
 if response.text.find("<title>登录</title>") > 0:
     # 说明Cookie失效了 --- 发送更新Cookie的邮件（10天更新一次）
