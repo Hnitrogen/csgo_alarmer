@@ -6,10 +6,6 @@ import os
 cookies = os.getenv("Cookie")
 print(cookies) 
 
-# 列出所有环境变量
-for key, value in os.environ.items():
-    print(f"{key}: {value}")
-
 headers = {
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language': 'zh-CN,zh;q=0.9',
