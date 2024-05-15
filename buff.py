@@ -57,18 +57,8 @@ else:
         """
         line_list.append(line)
 
-    line_list.insert(0, """
-        <!DOCTYPE html>
-                <html lang="">
-                  <head>
-                    <meta charset="utf-8">
-                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-                    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-                    <title><%= htmlWebpackPlugin.options.title %></title>
-                  </head>
-                  <body>""")
-    line_list.append("  </body> </html>")
+    line_list.insert(0, "<!DOCTYPE html><html lang=''><head><meta charset='utf-8'></head><body>")
+    line_list.append("</body></html>")
 
     with open("res.html", 'w') as file:
         file.writelines(line_list)
