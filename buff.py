@@ -51,9 +51,9 @@ else:
         icon_url = item.get("icon_url", "图片链接获取失败")
 
         line = f"""
-            <img style="width: 240px ; height: 200px" src="{icon_url}">
-            <h4>{name}</h4>
-            <h5>{tradable_text}</h5>
+            <img style="width: 100px ; height: 100px" src="{icon_url}">
+            <div style="font-weight: bolder;color: red">{name}</div>
+            <div>{tradable_text}</div>
         """
         line_list.append(line)
 
