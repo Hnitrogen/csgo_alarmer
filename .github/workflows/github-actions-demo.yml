@@ -24,7 +24,7 @@ jobs:
 
       - name: Run Python Script
         id: run_script
-        run: python cs_sync.py > output.txt 
+        run: python buff.py 
 
       - name: Send Email
         uses: dawidd6/action-send-mail@v3
@@ -34,6 +34,6 @@ jobs:
           username: ${{ secrets.EMAIL_USERNAME }}  # 电子邮件账户用户名
           password: ${{ secrets.EMAIL_PASSWORD }}  # 电子邮件账户密码
           subject: "Csgo饰品冷却日报"
-          body: file://output.txt
+          body: file://res.html
           from: luojicat@protonmail.com  # 发件人电子邮件地址
           to: 1791422575@qq.com  # 收件人电子邮件地址
