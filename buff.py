@@ -3,7 +3,7 @@ import json
 import os
 
 #
-cookies = os.getenv("Cookie")
+cookies = json.loads(os.getenv("Cookie"))
 print(cookies) 
 
 headers = {
