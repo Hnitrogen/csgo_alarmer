@@ -24,7 +24,8 @@ jobs:
       - name: Get Env 
         env: 
           Cookie: ${{ secrets.COOKIE }}
-          
+        run: echo "设置Cookie环境变量"
+        
       - name: Run Python Script
         id: run_script
         run: python buff.py 
